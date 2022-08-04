@@ -14,6 +14,7 @@ cp .env.example .env
 ```
 
 Build the docker containers using docker-compose
+<em>Note: If necessary switch the End of Line sequence from CRLF to LF inside all files of `docker/app`</em>
 ```
 docker-compose up -d --build
 ```
@@ -21,7 +22,7 @@ docker-compose up -d --build
 Enter the app's container using
 
 ```cmd
-docker exec -it blog-app-laravel.test-1 /bin/bash
+docker exec -it blog-app_laravel.test_1 /bin/bash
 ```
 
 Then inside the app's container run

@@ -42,4 +42,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * https://laravel.com/docs/8.x/eloquent-relationships#one-to-many
+     * 
+     * Return all posts created by user.
+     * 
+     * @return array<Post>
+     */
+    public function posts() {
+        return $this->hasMany(Post::class, 'author_id');
+    }
+
 }
