@@ -14,7 +14,6 @@ cp .env.example .env
 ```
 
 Build the docker containers using docker-compose
-<em>Note: If necessary switch the End of Line sequence from CRLF to LF inside all files of `docker/app`</em>
 ```
 docker-compose up -d --build
 ```
