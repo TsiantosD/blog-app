@@ -7,7 +7,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$post->title}}</h5>
                         <p class="card-text">
-                            {{Str::limit($post->body,100)}}
+                            {{Str::limit($post->body, 100)}}
                         </p>
 
                         <p>
@@ -15,7 +15,7 @@
                                 {{$post->author->name}}
                             </a>
                         </p>
-                        <a href="{{route('post.view',$post->slug)}}" class="btn btn-primary">Read more...</a>
+                        <a href="{{route('posts.show', $post->slug)}}" class="btn btn-primary">Read more...</a>
                     </div>
                 </div>
             @endforeach

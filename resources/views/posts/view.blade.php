@@ -15,7 +15,7 @@
         </div>
 
         <div>
-            Written by: <a href="{{route('user.posts',$post->author->id)}}">
+            Written by: <a href="{{route('user.posts', $post->author->id)}}">
                 {{$post->author->name}}
             </a>
         </div>

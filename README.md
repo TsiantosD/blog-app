@@ -22,7 +22,7 @@ docker-compose up -d --build
 Enter the app's container using
 
 ```cmd
-docker exec -it blog-app_laravel.test_1 /bin/bash
+docker exec -it blog-app-laravel.test-1 /bin/bash
 ```
 
 Then inside the app's container run

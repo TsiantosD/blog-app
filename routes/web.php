@@ -16,11 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+
 Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('index');
+Route::post('/posts/store', [App\Http\Controllers\PostController::class, 'store'])->name('posts.store');
+Route::get('/posts/create', [App\Http\Controllers\PostController::class, 'create'])->name('posts.create');
+Route::get('/posts/{slug}', [\App\Http\Controllers\PostController::class, 'show'])->name('posts.show');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/posts/{slug}', [\App\Http\Controllers\PostController::class, 'view'])->name('post.view');
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // https://laravel.com/docs/8.x/routing#route-parameters
-Route::get('/posts/user/{userId}', [App\Http\Controllers\UserPostController::class, 'index'])->name('user.posts');
+Route::get('/posts/user/{userId}', [\App\Http\Controllers\UserPostController::class, 'index'])->name('user.posts');
